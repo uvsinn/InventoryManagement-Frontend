@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="text-center">Enter new Product Details HERE...</h1>
+    <a href="" routerLink="/post/index" class="btn btn-warning">Back</a>
+
+    <div class="container">
+
+        <form (ngSubmit)="submit()" #productForm="ngForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="newProduct.name" required class="form-control">
+          </div>
+          <br>
+
+          
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" [(ngModel)]="newProduct.description" class="form-control" rows="4"></textarea>
+          </div>
+          <br>
+
+
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" [(ngModel)]="newProduct.amount" required class="form-control">
+          </div>
+          <br>
+
+
+          <div class="form-group">
+            <label for="isAvailable">Available:</label>
+            <select id="isAvailable" name="isAvailable" [(ngModel)]="newProduct.isAvailable" required class="form-control">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <br>
+
+          
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" [(ngModel)]="newProduct.quantity" required class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+      </div>
+      
+</div>

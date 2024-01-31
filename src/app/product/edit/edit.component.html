@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="text-center">Update Product HERE...</h1>
+    <a href="" routerLink="/post/index" class="btn btn-warning">Back</a>
+
+    <form (ngSubmit)="submit()" #editForm="ngForm" class="container">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="editedProduct.name" required class="form-control">
+        </div>
+        <br>
+
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" [(ngModel)]="editedProduct.description" class="form-control" rows="4"></textarea>
+        </div>
+        <br>
+
+
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" [(ngModel)]="editedProduct.amount" required class="form-control">
+        </div>
+        <br>
+
+
+        <div class="form-group">
+          <label>Availability:</label>
+          <div class="form-check">
+            <input type="radio" id="available" name="isAvailable" [(ngModel)]="editedProduct.isAvailable" [value]="true" class="form-check-input">
+            <label for="available" class="form-check-label">Available</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="not-available" name="isAvailable" [(ngModel)]="editedProduct.isAvailable" [value]="false" class="form-check-input">
+            <label for="not-available" class="form-check-label">Not Available</label>
+          </div>
+        </div>
+        <br>
+
+
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" [(ngModel)]="editedProduct.quantity" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </form>
+</div>
